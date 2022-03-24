@@ -1,0 +1,233 @@
+.user{
+   display: flex;
+   min-height: 100%;
+}
+
+/* Left Sidebar ============================================ */
+.sidebar {
+   z-index: 2;
+   background-color: #fff;
+}
+@media(min-width: 769px){
+   .sidebar{
+      flex: 0 0 300px;
+      padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+      padding-right: 0;
+   }
+}
+
+.sidebar__content {
+   border-right: 1px solid #e5e5e5;
+   height: 100%;
+}
+.menu__body {
+}
+.sidebar-menu__body {
+
+}
+
+@media(max-width: 768px){
+   .sidebar-menu__body {
+      padding: 21px 15px 30px 15px;
+      z-index: 2;
+   }
+   .sidebar-menu__body::after {
+      display: none;
+   }
+}
+
+.sidebar__logo {
+   display: inline-block;
+   width: calc(130px + (150 - 130) * ((100vw - 320px) / (1440 - 320)));
+}
+.sidebar__logo img{
+   max-width: 100%;
+}
+.menu__list {
+}
+.sidebar-menu__list {
+   padding-top: 40px;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+@media(max-width: 768px){
+   .sidebar-menu__body .icon-menu{
+      position: fixed;
+      top: 31px;
+      right: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+   }
+}
+
+.menu__item {
+}
+
+.sidebar-menu__list .menu__item{
+   margin: 4px 0;
+   padding: 14px 0;
+   position: relative;
+   cursor: pointer;
+   justify-content: flex-start;
+}
+.sidebar-menu__list .menu__item._active{
+   background-color: #fcfcfc;
+}
+.sidebar-menu__list .menu__item:before{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: -2px;
+   border-radius: 10px;
+   width: 4px;
+   height: 100%;
+   background-color: var(--primary);
+   opacity: 0;
+}
+
+.sidebar-menu__list .menu__item._active:before{
+   opacity: 1;
+}
+
+.sidebar-menu__list .menu__item i{
+   transition: color 0.3s;
+   font-size: 19px;
+   color: #a8a8a8;
+}
+
+.menu__link {
+}
+.sidebar-menu__list .menu__link{
+   text-transform: none;
+   color: #a8a8a8;
+   padding: 0 0 0 14px;
+}
+
+.sidebar-menu__list .menu__item._active .menu__link,
+.sidebar-menu__list .menu__item._active i{
+   color: var(--primary);
+}
+
+@media(any-hover: hover){
+   .sidebar-menu__list .menu__item:hover i{
+      color: var(--primary);
+   }
+   .sidebar-menu__list .menu__item:hover{
+      background-color: #faf9f9;
+   }
+}
+
+/* Right Content ============================================ */
+.content {
+   flex: 1 1 auto;
+}
+
+.content__header {
+}
+
+.content__pages {
+   margin: 100px calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+}
+.page-content {
+   display: none;
+}
+.page-content._active{
+   display: block;   
+}
+.page-content__title {
+   text-align-last: left;
+   font-weight: 600;
+   margin-bottom: calc(25px + (70 - 25) * ((100vw - 320px) / (1440 - 320)));
+}
+.page-content__message {
+}
+
+.content__breadcrumbs {
+}
+
+/* settings */
+
+.settings-page-content {
+}
+.page-content__title {
+}
+.settings-page-content__item{
+   margin-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)));
+}
+.avatar-settings {
+   display: flex;
+}
+.avatar-settings__select {
+   width: 100px;
+   flex: 0 0 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: #f6f6f6;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px;
+   margin-right: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+   cursor: pointer;
+}
+
+@media(max-width: 768px){
+   .avatar-settings__select{
+      width: 70px;
+      flex: 0 0 70px;
+      height: 70px;
+      font-size: 20px;
+   }
+}
+.avatar-settings__label {
+   padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+   border-radius: 10px;
+   background-color: #f6f6f6;
+   position: relative;
+   line-height: 140%;
+}
+
+.avatar-settings__label::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: -20px;
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+   border-right: 20px solid #f6f6f6;
+   transform: translate(0,-50%);
+}
+
+.avatar-settings__select._image{
+   overflow: hidden;
+}
+.avatar-settings__select._image img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+@media(min-width: 576px){
+   .avatar-settings__label{
+      max-width: calc(240px + (300 - 240) * ((100vw - 320px) / (1440 - 320)));
+   }
+}
+
+.inputs-settings {
+   position: relative;
+}
+
+.passwords-settings {
+}
+
+.passwords-settings__title {
+   margin-bottom: 25px;
+}
+
+.settings-page-content__btn {
+   width: 200px;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    color: #fff;
+}

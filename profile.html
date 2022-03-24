@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kirish</title>
+   <!-- Fonts -->
+   <link rel="stylesheet" href="css/fonts.css">
+   <!-- </Global styles> -->
+   <link rel="stylesheet" href="css/ui.css">
+   <link rel="stylesheet" href="css/start.css">
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/forms.css">
+   <!-- </Page styles> -->
+   <link rel="stylesheet" href="css/pages/profile.css">
+
+   <script src='https://kit.fontawesome.com/f3e4059bd1.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+   <main class="user">
+      <div class="sidebar">
+         <div class="sidebar__content">
+            <nav class="menu__body sidebar-menu__body">
+               <a href="index.html" class="sidebar__logo"><img src="img/logo.png" alt=""></a>
+               <!-- mobile -->
+               <div class="icon-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <ul class="menu__list sidebar-menu__list">
+                  <li class="menu__item _active">
+                     <i class="fas fa-home"></i>
+                     <a href="" class="menu__link">Mening kurslarim</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="fas fa-certificate"></i>
+                     <a href="" class="menu__link">Sertifikatlarim</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="far fa-credit-card"></i>
+                     <a href="" class="menu__link">To'lovlar</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="fas fa-user-cog"></i>
+                     <a href="" class="menu__link">Sozlamalar</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="fas fa-sign-out-alt"></i>
+                     <a href="" class="menu__link">Chiqish</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+
+      <div class="content">
+         <div class="content__header header-content">
+            <div class="header-content__user">
+               <span class="header-content__user_name">Azizbek Aslonov</span>
+               <a href="" class="header-content__icon">
+                  <i class="far fa-user"></i>
+               </a>
+            </div>
+            <a href="" class="header-content__icon">
+               <i class="far fa-bell"></i>
+            </a>
+         </div>
+         <div class="content__pages">
+            <div class="page-content _active">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">My courses</a></li>
+               </ul>
+               <h2 class="title page-content__title">MENING KURSLARIM</h2>
+               <div class="text-primary page-content__message">
+                  SIZDA HALI KURSLAR MAVJUD EMAS. <br>
+                  Bizning kurslar bo’limidan o’zingiz uchun munosib kursni tanlang
+               </div>
+
+            </div>
+            <div class="page-content">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">Sertifikatlar</a></li>
+               </ul>
+               <h2 class="title page-content__title">SERTIFIKATLARIM</h2>
+               <div class="text-primary page-content__message">
+                  SIZDA HALI SERTIFIKATLAR MAVJUD EMAS. <br>
+                  Kurslarimizni muvaffaqiyatli yakunlab sertifikatlarga ega bo'ling
+               </div>
+            </div>
+            <div class="page-content pay-page-content">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">To'lovlar</a></li>
+               </ul>
+               <h2 class="title page-content__title">To'lovlar</h2>
+            </div>
+            <div class="page-content settings-page-content">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">Sozlamalar</a></li>
+               </ul>
+               <h2 class="title page-content__title">SOZLAMALAR</h2>
+               <div class="settings-page-content__item avatar-settings">
+                  <div id="avatar" onclick="avatarInput.click()" class="avatar-settings__select">
+                     <i class="_icon-camera"></i>
+                  </div>
+                  <input accept=".jpg, .png, .webp" style="display: none;" id="avatarInput" type="file">
+                  <div class="avatar-settings__label">
+                     Avatar uchun o’z rasmingizni yuklang (rasm kvadrat shaklda bo'lishi tavsiya etiladi)
+                  </div>
+               </div>
+
+               <div class="settings-page-content__item inputs-settings">
+                  <div class="item-inputs">
+                     <input placeholder="Email" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Ismingiz" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Familiyangiz" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+               </div>
+
+               <div class="settings-page-content__item passwords-settings">
+                  <div class="subtitle passwords-settings__title">PAROL O’ZGARTIRISH</div>
+
+                  <div class="item-inputs">
+                     <input placeholder="Parolni kiriting" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Parolni tasdiqlang" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+               </div>
+               <button class="btn btn_primary settings-page-content__btn">Saqlash</button>
+            </div>
+            <div class="page-content">
+               <h2 class="title page-content__title">EXIT</h2>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script src="js/functions.js"></script>
+   <script src="js/user.js"></script>
+</body>
+
+</html>

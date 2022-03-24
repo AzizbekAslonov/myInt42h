@@ -1,0 +1,55 @@
+/* =================================================================== */
+/* a:focus{} */
+
+form{
+}
+
+input{
+   display: block;
+   width: 100%;
+   font-weight: 500;
+   color: #464646;
+}
+
+.input{
+   padding: 5px 3px 10px 3px;
+   border-bottom: 2px solid #d8d8d8;
+   font-size: 17px;
+   color: #000;
+}
+
+.btn {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0px 15px;
+   font-weight: 600;
+   font-size: 18px;
+   letter-spacing: 0.8px;
+   min-height: 48px;
+   transition:  0.4s ease 0s;
+   border-radius: 2px;
+}
+
+.btn_primary {
+   background-color: var(--primary);
+   color: #fff;
+}
+
+.btn_primary:focus {
+   background-color: #205c91;
+   color: #fff;
+}
+
+@media(max-width: 576px){
+   .btn{
+      font-size: 17px;
+   }
+}
+
+@media(any-hover: hover){
+   .btn_primary:hover {
+      background-color: #205c91;
+   }
+}
+/* =================================================================== */

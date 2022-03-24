@@ -1,0 +1,134 @@
+.page-content__subtitle{
+   font-size: 25px;
+}
+
+.functions-page__spoller-cnt {
+}
+.functions-page__item {
+   margin: 30px 0;
+}
+.create-function {
+}
+.functions-page__spoller-control {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 0 calc(12/22 * 1em) 0;
+}
+
+.functions-page__spoller-control i{
+   font-size: 25px;
+   margin: 0 10px;
+   transition: 0.4s;
+}
+.functions-page__spoller-control._active i{
+   transform: rotate(-180deg);
+}
+
+.create-function__item {
+}
+
+.block-functions {
+   box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+   border: 1px solid #f1f1f1;
+   color: rgb(18, 24, 40);
+   padding: 20px 24px;
+   margin-bottom: 25px;
+   border-radius: 5px;
+}
+@media(min-width: 767px){
+   .block-functions{
+      display: flex;
+   }
+}
+
+.block-functions__about {
+   margin-bottom: 20px;
+}
+@media(min-width: 767px){
+   .block-functions__about{
+      flex: 0 1 40%;
+      margin: 0 10px 20px 0;
+   }
+}
+
+.block-functions__item {
+}
+@media(min-width: 767px){
+   .block-functions__item{
+      flex: 0 1 60%;
+   }
+}
+
+.item-block {
+}
+.item-block__inputs {
+}
+.block-functions__title {
+   margin-bottom: 10px;
+   display: inline-block;
+}
+
+.item-block__textarea {
+   width: 100%;
+   display: block;
+   resize: vertical;
+   border: 1px solid rgb(230, 232, 240);
+   min-height: 200px;
+   padding: 15px;
+   transition: border 0.1s;
+   font-size: 17px;
+   color: #000;
+}
+.item-block__textarea:focus{
+   border: 2px solid var(--primary);
+}
+
+.item-block__select {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid #f4f4f4;
+   padding: 10px;
+   transition: 0.2s;
+}
+.item-block__select:hover{
+   background-color: rgba(55, 65, 81, 0.04);
+   cursor: pointer;
+   opacity: 0.5;
+}
+
+.files{}
+
+.files__item{
+   margin-bottom: 15px;
+   border: 1px solid #e6e6e6;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.files__item:last-child{
+   margin: 0;
+}
+
+/* EDIT FUNCTION */
+
+.edit-function {
+}
+.edit-function__item {
+}
+.edit-function__table {
+   margin: 30px 0;
+}
+
+.table-edit{
+}
+
+.table-edit__td{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kurslar</title>
+   <!-- </Global styles> -->
+   <link rel="stylesheet" href="css/ui.css">
+   <link rel="stylesheet" href="css/start.css">
+
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/forms.css">
+   <!-- Plugins -->
+   <link rel="stylesheet" href="./plugins/select/select.css">
+   <!-- </Page styles> -->
+   <link rel="stylesheet" href="css/pages/courses.css">
+   <!-- Fonts -->
+   <link rel="stylesheet" href="css/fonts.css">
+
+   <script src='https://kit.fontawesome.com/f3e4059bd1.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- <Header> -->
+      <header class="header">
+         <div class="header__wrapper">
+            <div class="header__container container">
+               <div class="header__body">
+                  <div class="header__main">
+                     <a href="index.html" class="header__logo"><img src="img/logo.png" alt=""></a>
+                     <div class='header__menu menu'>
+                        <nav class='menu__body'>
+                           <ul class='menu__list'>
+                              <li class="menu__item">
+                                 <a href='blog.html' class='menu__link'>БЛОГ</a>
+                              </li>
+                              <li class="menu__item"><a href='' class='menu__link'>Портфолио</a></li>
+                              <li class="menu__item"><a href='' class='menu__link'>DEMO</a></li>
+                              <li class="menu__item"><a href='' class='menu__link'>Проекты</a></li>
+                              <li class="menu__item"><a href='courses.html' class='menu__link'>Список курсов</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="header__actions actions-header">
+                     <!-- LANGUAGE CAHNGE -->
+                     <div data-dy="menu__list,last,778" data-spollers="768,max"
+                        class='actions-header__item actions-header__item-lang item-lang'>
+                        <div class="menu__item">
+                           <!-- !!!!!!!!!!!!!!!!!!!! -->
+                           <button data-spoller type="button" class="menu__link item-lang__title">
+                              UZ <i class="fas fa-angle-down menu__arrow" aria-hidden="true"></i>
+                           </button>
+                           <ul class="menu__sub-list">
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">ENG</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">RU</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">UZ</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- LANGUAGE CAHNGE -->
+                     <div class="actions-header__item cart-header">
+                        <a href="" class="cart-header__icon">
+                           <i class="fas fa-cart-plus"></i>
+                        </a>
+                        <div class="cart-header__body">
+                           <ul class="cart-header__list cart-list"></ul>
+                        </div>
+                     </div>
+                     <a href="profile.html" class="actions-header__item actions-header__item-user _ibg">
+                        <img src="img/avatar.jpg" alt="Avatar">
+                     </a>
+                  </div>
+                  <div class='icon-menu'>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- </Header> -->
+      <main class="page">
+         <div class="page-content all-courses">
+            <div class='container'>
+               <h2 class="title page-content__title courses__title">All courses</h2>
+               <div class="all-courses__filter">
+                  <div class="all-courses__filter-item all-courses__select" id="select"></div>
+                  <div class="all-courses__filter-item item-inputs">
+                     <input class="input all-courses__search" placeholder="Search course with name" type="text">
+                     <span class="item-inputs__span"></span>
+                  </div>
+               </div>
+               <div class="all-courses__container">
+                  <a data-filter-item data-filter-group="design" data-filter-name="photoshop" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Design</div>
+                           <div class="subtitle">Photoshop</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/41">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <!-- <div class="actions-courses__like">
+                        35<span class="_icon-favorite"></span>
+                     </div> -->
+                              <button class='btn btn_primary' type='button'>Batafsil</button>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="programming" data-filter-name="reactjs" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Programming</div>
+                           <div class="subtitle">ReactJS</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/42">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="math" data-filter-name="geometry" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Math</div>
+                           <div class="subtitle">Geometry</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/42">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="design" data-filter-name="after effects" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Design</div>
+                           <div class="subtitle">After Effects</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/41">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="programming" data-filter-name="python backend"
+                     href="course.html" class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Programming</div>
+                           <div class="subtitle">Python Backend</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/41">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="physics" data-filter-name="mechanics" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Physics</div>
+                           <div class="subtitle">Mechanics</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/42">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="design" data-filter-name="adobe xd" href="course.html"
+                     class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Design</div>
+                           <div class="subtitle">Adobe XD</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/41">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-filter-item data-filter-group="programming" data-filter-name="nodejs backend"
+                     href="course.html" class="all-courses__item item-courses">
+                     <div class="item-courses__body body-courses">
+                        <div class="body-courses__content">
+                           <div class="body-courses__name">Programming</div>
+                           <div class="subtitle">Nodejs Backend</div>
+                           <div class="body-courses__text text-primary">
+                              One make creepeth man bearing their one firmament won't fowl
+                              meat over sea</div>
+                        </div>
+                        <div class="body-courses__footer">
+                           <div class="body-courses__teacher">
+                              <div class="body-courses__teacher_img">
+                                 <img src="https://picsum.photos/45/42">
+                              </div>
+                              <div class="body-courses__teacher_name">
+                                 <span>Azizbek</span>
+                                 <span>Aslonov</span>
+                              </div>
+                           </div>
+                           <div class="body-courses__actions actions-courses">
+                              <div class="actions-courses__like">
+                                 35<span class="_icon-favorite"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <!-- if courses are not found -->
+               <p hidden id="notFound" class="text-primary">Курсы не найдены!</p>
+            </div>
+         </div>
+      </main>
+
+      <!-- <Footer> -->
+      <footer class="footer">
+         <div class="footer__container container">
+            <div class="footer__body">
+               <div class="footer__main">
+                  <!-- <a href="" class="footer__logo _footer-title">Logo</a> -->
+                  <!-- <div class="footer__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tempora.</div> -->
+                  <div class="footer__contacts contacts-footer">
+                     <a target="_blank"
+                        href="https://www.google.com/maps/place/RobotsAndMe/@39.761879,64.4194494,17z/data=!3m1!4b1!4m5!3m4!1s0x3f500771574c9091:0x766b76620d7d2dfd!8m2!3d39.7618749!4d64.4216381"
+                        class="contacts-footer__item">
+                        <i class="fas fa-map-marker-alt"></i> Oффлайн образование
+                     </a>
+                     <a href="tel:+914014742" class="contacts-footer__item">
+                        <i class="fas fa-phone"></i> +998 (91) 401 47 42
+                     </a>
+                     <a href="mailto:navruz@gmail.com" target="_blank" class="contacts-footer__item">
+                        <i class="far fa-envelope"></i> navruz@gmail.com
+                     </a>
+                  </div>
+               </div>
+               <div data-spollers="768,max" class="footer__menu menu-footer">
+                  <div class="menu-footer__column">
+                     <button data-spoller class="menu-footer__title _footer-title">
+                        Menu<i class="fas fa-angle-down"></i>
+                     </button>
+                     <ul class="menu-footer__list">
+                        <li><a href="" class="menu-footer__link">Products</a></li>
+                        <li><a href="" class="menu-footer__link">Rooms</a></li>
+                        <li><a href="" class="menu-footer__link">Inspirations</a></li>
+                        <li><a href="" class="menu-footer__link">About Us</a></li>
+                        <li><a href="" class="menu-footer__link">Terms & Policy</a></li>
+                     </ul>
+                  </div>
+                  <div class="menu-footer__column">
+                     <button data-spoller class="menu-footer__title _footer-title">
+                        Account <i class="fas fa-angle-down"></i>
+                     </button>
+                     <ul class="menu-footer__list">
+                        <li><a href="" class="menu-footer__link">My Account</a></li>
+                        <li><a href="" class="menu-footer__link">Checkout</a></li>
+                        <li><a href="" class="menu-footer__link">My Cart</a></li>
+                        <li><a href="" class="menu-footer__link">My catalog</a></li>
+                     </ul>
+                  </div>
+                  <div class="menu-footer__column">
+                     <button data-spoller class="menu-footer__title _footer-title">
+                        Stay Connected<i class="fas fa-angle-down"></i>
+                     </button>
+                     <ul class="menu-footer__list">
+                        <li><a href="" class="menu-footer__link">Facebook</a></li>
+                        <li><a href="" class="menu-footer__link">Instagram</a></li>
+                        <li><a href="" class="menu-footer__link">Twitter</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="footer__subscribe subscribe-footer">
+                  <div class="subscribe-footer__title _footer-title">
+                     Stay Updated
+                  </div>
+                  <form action="" class="subscribe-footer__form">
+                     <input class="subscribe-footer__input" autocomplete="off" placeholder="Enter your email"
+                        type="text">
+                     <button type="submit" class="subscribe-footer__btn btn_primary">
+                        <i class="far fa-paper-plane"></i>
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- </Footer> -->
+   </div>
+
+   <script src="js/functions.js"></script>
+
+   <script src="./plugins/select/select.js"></script>
+   <script src="./plugins/spoilers.js"></script>
+
+   <script src="js/script.js"></script>
+   <script src="js/courses.js"></script>
+</body>
+
+</html>

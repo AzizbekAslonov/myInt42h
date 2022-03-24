@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kirish</title>
+   <!-- </Global styles> -->
+   <link rel="stylesheet" href="css/ui.css">
+   <link rel="stylesheet" href="css/start.css">
+
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/forms.css">
+   <!-- </Page styles> -->
+   <link rel="stylesheet" href="css/pages/profile.css">
+   <link rel="stylesheet" href="css/pages/teacher.css">
+   <!-- Fonts -->
+   <link rel="stylesheet" href="css/fonts.css">
+
+   <script src='https://kit.fontawesome.com/f3e4059bd1.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+   <main class="user user-teacher">
+      <div class="sidebar">
+         <div class="sidebar__content">
+            <nav class="menu__body sidebar-menu__body">
+               <a href="index.html" class="sidebar__logo"><img src="img/logo.png" alt=""></a>
+
+               <!-- mobile -->
+               <div class="icon-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+
+               <ul class="menu__list sidebar-menu__list">
+                  <li class="menu__item _active">
+                     <i class="fas fa-home"></i>
+                     <a href="" class="menu__link">Kurs boshqaruvi</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="fas fa-user-cog"></i>
+                     <a href="" class="menu__link">Sozlamalar</a>
+                  </li>
+                  <li class="menu__item">
+                     <i class="fas fa-sign-out-alt"></i>
+                     <a href="" class="menu__link">Chiqish</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+
+      <div class="content">
+         <!-- User header -->
+         <div class="content__header header-content">
+            <div class="header-content__user">
+               <span class="header-content__user_name">Azizbek Aslonov</span>
+               <a href="" class="header-content__icon">
+                  <i class="far fa-user"></i>
+               </a>
+            </div>
+            <a href="" class="header-content__icon">
+               <i class="far fa-bell"></i>
+            </a>
+         </div>
+
+         <!-- Tab items -->
+         <div class="content__pages">
+            <!-- subpage 1 -->
+            <div class="page-content functions-page _active">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">Kurs boshqaruvi</a></li>
+               </ul>
+               <h2 class="title page-content__title">Kurs boshqaruvi</h2>
+               <div data-spollers data-one-spoller class="functions-page__spoller-cnt">
+                  <div class="functions-page__item create-function">
+                     <button data-spoller class="btn btn_primary functions-page__spoller-control">
+                        Yangi kurs qo'shish
+                        <i class="fas fa-angle-down"></i>
+                     </button>
+                     <div class="create-function__item">
+                        <div class="block-functions">
+                           <div class="block-functions__about">
+                              <label for="courseName" class="subtitle block-functions__title">Basic details</label>
+                           </div>
+                           <div class="block-functions__item item-block">
+                              <div class="item-block__inputs item-inputs">
+                                 <input id="courseName" placeholder="Course name" type="text" class="input">
+                                 <span class="item-inputs__span"></span>
+                              </div>
+                              <div class="item-block__inputs">
+                                 <label class="subtitle block-functions__title" for="description">Description</label>
+                                 <textarea placeholder="Write something..." id="description"
+                                    class="item-block__textarea"></textarea>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="block-functions">
+                           <div class="block-functions__about">
+                              <div class="subtitle block-functions__title">Files</div>
+                              <div style="margin-bottom: 20px;" class="text-primary">Images will appear in the store
+                                 front of your website</div>
+
+                              <div class="files" id="fileNames"></div>
+                           </div>
+                           <div class="block-functions__item item-block">
+                              <input style="display: none;" type="file" id="coursesFile">
+                              <div onclick="coursesFile.click()" class="item-block__select">
+                                 <img width="150" alt="Select file" src="img/select.svg">
+                                 <div>Select files</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="block-functions">
+                           <div class="block-functions__about">
+                              <label for="coursePricing" class="subtitle block-functions__title">Pricing</label>
+                           </div>
+                           <div class="block-functions__item item-block">
+                              <div class="item-block__inputs item-inputs">
+                                 <input id="coursePricing" placeholder="Price" type="number" class="input">
+                                 <span class="item-inputs__span"></span>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="btn btn_primary settings-page-content__btn">Saqlash</button>
+                     </div>
+                  </div>
+                  <div class="functions-page__item edit-function">
+                     <button data-spoller class="btn btn_primary functions-page__spoller-control">
+                        Kursni tahrirlash
+                        <i class="fas fa-angle-down"></i>
+                     </button>
+                     <div class="edit-function__item">
+                        <table class="edit-function__table table table-edit">
+                           <thead></thead>
+                           <tbody>
+                              <tr>
+                                 <td class="table-edit__td">
+                                    <span>ROBOTOTEXNIKA</span>
+                                    <i class="fas fa-cog"></i>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="table-edit__td">
+                                    <span>SXEMOTEXNIKA</span>
+                                    <i class="fas fa-cog"></i>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Elektrotexnika</td>
+                                 <i class="fas fa-cog"></i>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <button class="btn btn_primary settings-page-content__btn">Saqlash</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- subpage 2 -->
+            <div class="page-content settings-page-content">
+               <ul class="breadcrumbs content__breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="index.html">Glavnaya</a></li>
+                  <li class="breadcrumbs__item"><a class="_active" href="">Sozlamalar</a></li>
+               </ul>
+
+               <h2 class="title page-content__title">SOZLAMALAR</h2>
+               <div class="settings-page-content__item avatar-settings">
+                  <div id="avatar" onclick="avatarInput.click()" class="avatar-settings__select">
+                     <i class="_icon-camera"></i>
+                  </div>
+                  <input style="display: none;" id="avatarInput" type="file">
+                  <div class="avatar-settings__label">
+                     Avatar uchun o’z rasmingizni yuklang (rasm kvadrat shaklda bo'lishi tavsiya etiladi)
+                  </div>
+               </div>
+
+               <div class="settings-page-content__item inputs-settings">
+                  <div class="item-inputs">
+                     <input placeholder="Email" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Ismingiz" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Familiyangiz" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+               </div>
+
+               <div class="settings-page-content__item passwords-settings">
+                  <div class="subtitle passwords-settings__title">PAROL O’ZGARTIRISH</div>
+                  <div class="item-inputs">
+                     <input placeholder="Parolni kiriting" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+                  <div class="item-inputs">
+                     <input placeholder="Parolni tasdiqlang" type="text" class="input">
+                     <span class="item-inputs__span"></span>
+                  </div>
+               </div>
+               <button class="btn btn_primary settings-page-content__btn">Saqlash</button>
+            </div>
+            <!-- subpage 3 -->
+            <div class="page-content">
+               <h2 class="title page-content__title">EXIT</h2>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script src="js/functions.js"></script>
+
+   <script src="./plugins/spoilers.js"></script>
+
+   <script src="js/user.js"></script>
+   <script src="js/teacher.js"></script>
+</body>
+
+</html>
