@@ -144,6 +144,19 @@
    text-decoration: none;
 }
 
+@media(max-width: 768px){
+   .breadcrumbs__item {
+      margin-right: 5px;
+      margin-bottom: 5px;
+   }
+   .breadcrumbs__item:not(:last-child):after{
+      margin-left: 5px;
+   }
+   .breadcrumbs__item a{
+      font-size: 15px;
+   }
+}
+
 .table{
    display: table;
    width: 100%;

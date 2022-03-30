@@ -357,6 +357,20 @@
 }
 /* Language select */
 
+.actions-header__item_link {
+   font-size: 18px;
+   font-weight: 500;
+   text-transform: uppercase;
+   color: inherit;
+   transition: color 0.3s ease;
+}
+
+@media(any-hover: hover){
+   .actions-header__item_link:hover{
+      color: var(--primary);
+   }
+}
+
 .actions-header__item_favorites,
 .actions-header__item_enter {
    color: #262f56;
