@@ -1,13 +1,26 @@
-_ibg()
+document.addEventListener('click', clickHandler)
 
-let iconMenu = document.querySelector('.icon-menu');
-iconMenu && iconMenu.addEventListener('click', clickHandler)
-
-function clickHandler() {
-   document.querySelector('.menu__body').classList.toggle('_active')
-   document.body.classList.toggle('_lock')
-   iconMenu.classList.toggle('_active')
+function clickHandler(e) {
+   const target = e.target
+   if (window.innerWidth > 768 && isMobile.any()) {
+      if (target.closest('.item-lang__title')) {
+         target.closest('.menu__item').classList.toggle('_hover')
+      }
+      if (!target.closest('.menu__item') && document.querySelectorAll('.menu__item._hover').length > 0) {
+         document.querySelectorAll('.menu__item._hover').forEach(el => el.classList.remove('_hover'))
+      }
+   }
+   if (window.innerWidth <= 768) {
+      if (target.closest('.icon-menu')) {
+         document.querySelector('.icon-menu').classList.toggle('_active')
+         document.querySelector('.sidebar-menu__body').classList.toggle('_active')
+         document.body.classList.toggle('_lock')
+      }
+   }
 }
+
+// Set min functions
+_setBasicTemplate()
 
 // Tabs
 function tab({ cnt, controls, contents }) {
@@ -32,7 +45,11 @@ function tab({ cnt, controls, contents }) {
             e.preventDefault()
 
             // Mobile click
-            if (isMobile.any() && window.innerWidth <= 768) clickHandler()
+            if (isMobile.any() && window.innerWidth <= 768) {
+               document.querySelector('.sidebar-menu__body').classList.toggle('_active')
+               document.body.classList.toggle('_lock')
+               document.querySelector('.icon-menu').classList.toggle('_active')
+            }
          })
       }
    } else console.log('length !=');

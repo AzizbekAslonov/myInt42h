@@ -1,4 +1,4 @@
-.login{
+.login {
    padding: 20px 10px;
    min-height: 100%;
    display: flex;
@@ -6,7 +6,27 @@
    max-width: 1200px;
    margin: 0 auto;
 }
- 
+
+.login__header {
+   text-align: center;
+}
+
+.login__logo {
+   margin-bottom: 20px;
+   display: inline-block;
+}
+
+.login__logo img {
+   max-width: 150px;
+   width: 100%;
+}
+
+@media(max-width: 768px) {
+   .login__logo img {
+      max-width: 120px;
+   }
+}
+
 .login__container {
    padding: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320))) calc(20px + (25 - 20) * ((100vw - 320px) / (1440 - 320)));
    /* border: 1px solid #000; */
@@ -28,7 +48,7 @@
    flex: 1 1 auto;
 }
 
-.login__label{
+.login__label {
    display: inline-block;
    margin: 10px 0 15px 0;
    font-weight: 500;
@@ -40,7 +60,7 @@
    font-size: 18px;
 }
 
-.login__input::placeholder{
+.login__input::placeholder {
    font-size: 16px;
    font-weight: 400;
 }
@@ -59,7 +79,7 @@
    margin-right: 10px;
 }
 
-.login__info a{
+.login__info a {
    color: #0d6efd;
    text-decoration: underline;
 }
@@ -78,36 +98,39 @@
    color: #fff;
    background-color: var(--primary);
 }
+
 .login__btn:focus {
    background-color: #205c91;
 }
 
-@media(any-hover: hover){
-   .login__info a:hover{
+@media(any-hover: hover) {
+   .login__info a:hover {
       color: #0a58ca;
    }
-   .login__btn:hover{
+
+   .login__btn:hover {
       background-color: #205c91;
    }
 }
-@media(max-width: 767px){
+
+@media(max-width: 767px) {
    .login__btn {
       min-height: 40px;
       font-size: 16px;
    }
 }
 
-.login__image{
+.login__image {
    display: none;
 }
 
-@media(min-width: 992px){
-   .login__image{
+@media(min-width: 992px) {
+   .login__image {
       display: block;
       flex: 0 1 50%;
    }
 }
 
-.login__image img{
+.login__image img {
    max-width: 100%;
 }

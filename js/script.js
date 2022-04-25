@@ -26,13 +26,14 @@ window.onload = function () {
    let iconMenu = document.querySelector('.icon-menu')
    if (iconMenu) {
       iconMenu.addEventListener('click', () => {
-         document.querySelector('.menu__body').classList.toggle('_active')
+         document.querySelector('.menu__body')?.classList.toggle('_active')
          document.body.classList.toggle('_lock')
          iconMenu.classList.toggle('_active')
       })
    }
-   let mainTitle = document.querySelector('.intro-main__title span')
-   if (mainTitle) {
-      new TypeWriter(mainTitle, ['Hello World!'])
-   }
+   // Main title animation
+   // let mainTitle = document.querySelector('.intro-main__title span')
+   // if (mainTitle) {
+   //    new TypeWriter(mainTitle, ['Прервись! Образовывайся по-умному'])
+   // }
 }

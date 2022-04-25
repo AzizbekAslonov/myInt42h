@@ -20,17 +20,67 @@
 </head>
 
 <body>
-   <main class="user">
-      <div class="sidebar">
-         <div class="sidebar__content">
-            <nav class="menu__body sidebar-menu__body">
-               <a href="index.html" class="sidebar__logo"><img src="img/logo.png" alt=""></a>
-               <!-- mobile -->
-               <div class="icon-menu">
+   <header class="header">
+      <div class="header__wrapper">
+         <div class="header__container container">
+            <div class="header__body">
+               <div class="header__main">
+                  <a href="index.html" class="header__logo"><img src="img/logo.png" alt=""></a>
+                  <div class='header__menu menu'>
+                     <nav class='menu__body'>
+                        <ul class='menu__list'>
+                           <li class="menu__item">
+                              <a href='blog.html' class='menu__link'>БЛОГ</a>
+                           </li>
+                           <li class="menu__item"><a href='' class='menu__link'>Портфолио</a></li>
+                           <li class="menu__item"><a href='' class='menu__link'>DEMO</a></li>
+                           <li class="menu__item"><a href='' class='menu__link'>Проекты</a></li>
+                           <li class="menu__item"><a href='courses.html' class='menu__link'>Список курсов</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="header__actions actions-header">
+                  <!-- LANGUAGE CAHNGE -->
+                  <div data-dy="sidebar-menu__body,last,768" data-spollers="768,max"
+                     class='actions-header__item actions-header__item-lang item-lang'>
+                     <div class="menu__item">
+                        <button data-spoller type="button" class="menu__link item-lang__title">
+                           UZ <i class="fas fa-angle-down menu__arrow" aria-hidden="true"></i>
+                        </button>
+                        <ul class="menu__sub-list">
+                           <li class="menu__sub-item"><a href="" class="menu__sub-link">ENG</a></li>
+                           <li class="menu__sub-item"><a href="" class="menu__sub-link">RU</a></li>
+                           <li class="menu__sub-item"><a href="" class="menu__sub-link">UZ</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- LANGUAGE CAHNGE -->
+                  <div class="actions-header__item cart-header">
+                     <a href="" class="cart-header__icon">
+                        <i class="fas fa-cart-plus"></i>
+                     </a>
+                     <div class="cart-header__body">
+                        <ul class="cart-header__list cart-list"></ul>
+                     </div>
+                  </div>
+                  <a href="profile.html" class="actions-header__item actions-header__item-user _ibg">
+                     <img src="img/avatar.jpg" alt="Avatar">
+                  </a>
+               </div>
+               <div class='icon-menu'>
                   <span></span>
                   <span></span>
                   <span></span>
                </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <main class="user">
+      <div class="sidebar">
+         <div class="sidebar__content">
+            <nav class="menu__body sidebar-menu__body">
                <ul class="menu__list sidebar-menu__list">
                   <li class="menu__item _active">
                      <i class="fas fa-home"></i>
@@ -58,17 +108,6 @@
       </div>
 
       <div class="content">
-         <div class="content__header header-content">
-            <div class="header-content__user">
-               <span class="header-content__user_name">Azizbek Aslonov</span>
-               <a href="" class="header-content__icon">
-                  <i class="far fa-user"></i>
-               </a>
-            </div>
-            <a href="" class="header-content__icon">
-               <i class="far fa-bell"></i>
-            </a>
-         </div>
          <div class="content__pages">
             <div class="page-content _active">
                <ul class="breadcrumbs content__breadcrumbs">
@@ -154,6 +193,10 @@
 
    <script src="js/functions.js"></script>
    <script src="js/user.js"></script>
+   <!-- <script src="js/script.js"></script> -->
+
+   <script src="plugins/dynamic.js"></script>
+   <script src="plugins/spoilers.js"></script>
 </body>
 
 </html>

@@ -255,3 +255,46 @@ if (document.querySelector('.advantages__body')) {
       },
    })
 }
+
+if (document.querySelector('.content-lesson__body')) {
+   const CONTROLS = [
+      '1.1 Kirish',
+      '1.2 React va komponentlar',
+      '1.3 Reactda hooklar'
+   ]
+   new Swiper('.content-lesson__body', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      watchOverflow: true,
+      speed: 800,
+      allowTouchMove: false,
+      // loopAdditionalSlides: 5,
+      // preloadImages: false,
+      spaceBetween: 15,
+      // breakpoints: {
+      //    768: {
+      //       slidesPerView: 2,
+      //    },
+      // },
+      // Автопрокрутка
+      // autoplay: {
+      //    delay: 1000,
+      //    stopOnLastSlide: false,
+      //    disableOnInteraction: false,
+      // },
+      // Пагинация
+      pagination: {
+         el: '.content-spoller-modules',
+         clickable: true,
+         renderBullet: function (index, className) {
+            return ` <div class="${className} content-spoller-modules__item">
+               <i class="fas fa-lock content-spoller-modules__access"></i>
+               <div class="content-spoller-modules__info">
+               ${CONTROLS[index]}
+               </div>
+            </div>`
+         },
+      },
+   })
+}
