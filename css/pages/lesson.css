@@ -230,3 +230,19 @@
     font-weight: 500;
     line-height: 125%;
 }
+
+.checkbox-ui {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--primary);
+    display: flex;
+}
+
+.checkbox-ui:after {
+    content: "";
+    width: 70%;
+    height: 70%;
+    background-color: var(--primary);
+    transform: translate(15%, 15%);
+}
