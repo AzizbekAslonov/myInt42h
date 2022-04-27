@@ -64,7 +64,12 @@
 
 .lessons .modules-programm__spoller {
     border-bottom: 4px solid #ebf1f3;
-    padding: 0 17px;
+}
+
+@media(min-width: 992px) {
+    .lessons .modules-programm__spoller {
+        padding-right: 20px;
+    }
 }
 
 @media(max-width: 767px) {
@@ -114,6 +119,12 @@
     padding-bottom: calc(24 * ((100vw - 320px) / (1440 - 320)));
 }
 
+.content-lesson__info {}
+
+.content-lesson__info:not(:last-child) {
+    margin-bottom: 40px;
+}
+
 .content-lesson__body {
     overflow: hidden;
 }
@@ -159,4 +170,63 @@
     .content-lesson__text a:hover {
         opacity: 0.8;
     }
+}
+
+/* Arduino Course Styles */
+.content-lesson__title {
+    margin: 0 0 calc(35/22 * 1em) 0;
+}
+
+.ui-lesson__list {
+    list-style-type: disc;
+}
+
+.ui-lesson__list {}
+
+.ui-lesson__list li {
+    position: relative;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.ui-lesson__list li:after {
+    content: "";
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+}
+
+.ui-lesson__table {
+    border: 1px solid #dee2e6;
+    width: calc(100% - 2px);
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.ui-lesson__table thead th {
+    font-size: 19px;
+    border-bottom-width: 2px;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.ui-lesson__table th,
+.ui-lesson__table td {
+    border: 1px solid #dee2e6;
+    padding: .75rem;
+    vertical-align: top;
+}
+
+.ui-lesson__table td {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 125%;
 }
