@@ -12,6 +12,9 @@ window.onload = function () {
             document.querySelectorAll('.menu__item._hover').forEach(el => el.classList.remove('_hover'))
          }
       }
+      if (targetElement.closest('.ui-lesson__checkbox')) {
+         targetElement.closest('.ui-lesson__checkbox').classList.toggle('_checked')
+      }
 
       // !!!!!!! <Mobile search responsive> !!!!!!
       // if (targetElement.classList.contains('search-form__icon')) {

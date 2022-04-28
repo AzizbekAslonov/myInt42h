@@ -184,7 +184,6 @@
 let sliders = document.querySelectorAll('._swiper');
 for (let i = 0; i < sliders.length; i++) {
    const slider = sliders[i];
-
    if (!slider.classList.contains('swiper-bild')) {
       let slider_items = slider.children;
       if (slider_items) {
@@ -219,6 +218,8 @@ if (document.querySelector('.slider-main__body')) {
       // Пагинация
       pagination: {
          el: '.controls-main-slider__dotts',
+         bulletClass: 'swiper-bullet',
+         bulletActiveClass: 'swiper-bullet-active',
          clickable: true,
       },
       // Автопрокрутка
@@ -258,9 +259,9 @@ if (document.querySelector('.advantages__body')) {
 
 if (document.querySelector('.content-lesson__body')) {
    const CONTROLS = [
-      '1.1 Kirish',
+      'Необходимые комплектующие',
       '1.2 React va komponentlar',
-      '1.3 Reactda hooklar'
+      'Ulanishi ...'
    ]
    new Swiper('.content-lesson__body', {
       observer: true,
@@ -269,20 +270,8 @@ if (document.querySelector('.content-lesson__body')) {
       watchOverflow: true,
       speed: 800,
       allowTouchMove: false,
-      // loopAdditionalSlides: 5,
-      // preloadImages: false,
+      preloadImages: true,
       spaceBetween: 15,
-      // breakpoints: {
-      //    768: {
-      //       slidesPerView: 2,
-      //    },
-      // },
-      // Автопрокрутка
-      // autoplay: {
-      //    delay: 1000,
-      //    stopOnLastSlide: false,
-      //    disableOnInteraction: false,
-      // },
       // Пагинация
       pagination: {
          el: '.content-spoller-modules',
@@ -295,6 +284,26 @@ if (document.querySelector('.content-lesson__body')) {
                </div>
             </div>`
          },
+      },
+   })
+}
+
+if (document.querySelector('.nested-lesson__body')) {
+   new Swiper('.nested-lesson__body', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      speed: 800,
+      preloadImages: false,
+      spaceBetween: 20,
+      // autoHeight: true,
+      // parallax: true,
+      // Пагинация
+      pagination: {
+         el: '.nested-lesson__dotts',
+         bulletClass: 'swiper-bullet',
+         bulletActiveClass: 'swiper-bullet-active',
+         clickable: true,
       },
    })
 }

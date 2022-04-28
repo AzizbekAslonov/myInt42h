@@ -233,16 +233,51 @@
 
 .checkbox-ui {
     position: relative;
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid var(--primary);
+    margin: 0 auto;
+    max-width: 22px;
+    height: 22px;
+    border: 1px solid #000;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
 }
 
-.checkbox-ui:after {
-    content: "";
-    width: 70%;
-    height: 70%;
-    background-color: var(--primary);
-    transform: translate(15%, 15%);
+.checkbox-ui._checked {}
+
+.checkbox-ui i {
+    font-size: 25px;
+    transition: 0.3s;
+    color: #4BB543;
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+.checkbox-ui._checked i {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.content-lesson__nested {
+    text-align: center;
+}
+
+.nested-lesson {}
+
+.nested-lesson__body {
+    margin: 0 0 20px 0;
+}
+
+.nested-lesson__slide {
+    flex: 0 1 100%;
+}
+
+.nested-lesson__slide img {
+    max-width: 100%;
+}
+
+.nested-lesson__dotts {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
