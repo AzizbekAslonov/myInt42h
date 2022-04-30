@@ -160,7 +160,6 @@
 //       //    slideShadows: true
 //       // },
 
-
 //       // Tegmagan maqul :) uglda keyingisiga o'tish ?... 
 //       // touchAngle: 20,
 
@@ -208,7 +207,6 @@ if (document.querySelector('.slider-main__body')) {
    new Swiper('.slider-main__body', {
       observer: true,
       observeParents: true,
-      slidesPerView: 1,
       watchOverflow: true,
       speed: 800,
       loop: true,
@@ -235,7 +233,6 @@ if (document.querySelector('.advantages__body')) {
    new Swiper('.advantages__body', {
       observer: true,
       observeParents: true,
-      slidesPerView: 1,
       watchOverflow: true,
       speed: 800,
       loop: true,
@@ -266,7 +263,6 @@ if (document.querySelector('.content-lesson__body')) {
    new Swiper('.content-lesson__body', {
       observer: true,
       observeParents: true,
-      slidesPerView: 1,
       watchOverflow: true,
       speed: 800,
       allowTouchMove: false,
@@ -292,18 +288,20 @@ if (document.querySelector('.nested-lesson__body')) {
    new Swiper('.nested-lesson__body', {
       observer: true,
       observeParents: true,
-      slidesPerView: 1,
-      speed: 800,
-      preloadImages: false,
       spaceBetween: 20,
-      // autoHeight: true,
-      // parallax: true,
+      touchRatio: 0.8,
+      effect: 'fade',
+      grabCursor: true,
       // Пагинация
-      pagination: {
-         el: '.nested-lesson__dotts',
-         bulletClass: 'swiper-bullet',
-         bulletActiveClass: 'swiper-bullet-active',
-         clickable: true,
+      navigation: {
+         nextEl: '.nested-lesson__next',
+         prevEl: '.nested-lesson__prev',
       },
+      // pagination: {
+      //    el: '.nested-lesson__pagination',
+      //    type: 'progressbar',
+      //    bulletClass: 'swiper-bullet',
+      //    bulletActiveClass: 'swiper-bullet-active',
+      // },
    })
 }
