@@ -276,10 +276,22 @@
 
 .nested-lesson__slide {
     flex: 0 1 100%;
+    padding-bottom: 63%;
+}
+
+@media(max-width: 576px) {
+    .nested-lesson__slide {
+        padding-bottom: 77%;
+    }
 }
 
 .nested-lesson__slide img {
-    max-width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 /* slider modules */
@@ -291,7 +303,7 @@
 .nested-lesson__prev,
 .nested-lesson__next {
     transition: 0.4s;
-    font-size: 40px;
+    font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
     z-index: 10;
     cursor: pointer;
     color: var(--primary);
@@ -315,6 +327,8 @@
     background: rgba(0, 0, 0, .25);
     width: 100%;
     height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;

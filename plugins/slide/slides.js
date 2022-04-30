@@ -297,11 +297,9 @@ if (document.querySelector('.nested-lesson__body')) {
          nextEl: '.nested-lesson__next',
          prevEl: '.nested-lesson__prev',
       },
-      // pagination: {
-      //    el: '.nested-lesson__pagination',
-      //    type: 'progressbar',
-      //    bulletClass: 'swiper-bullet',
-      //    bulletActiveClass: 'swiper-bullet-active',
-      // },
+      pagination: {
+         el: '.nested-lesson__pagination',
+         type: 'progressbar',
+      },
    })
 }
