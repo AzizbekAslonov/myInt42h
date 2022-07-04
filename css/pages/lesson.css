@@ -16,17 +16,52 @@
 
 .lessons__banner {
     position: relative;
-    padding-bottom: 16%;
+    padding-bottom: 2%;
     margin-bottom: calc(30px + (45 - 30) * ((100vw - 320px) / (1440 - 320)));
 }
 
-.lessons__banner img {
+@media (max-width: 992px) {
+    .lessons__banner {
+        padding-bottom: 20%;
+    }
+}
+
+.banner-lesson {}
+
+.banner-lesson__content {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 993px) {
+    .banner-lesson__content {
+        color: #fff;
+        padding: calc(0px + (40 - 0) * ((100vw - 320px) / (1440 - 320)));
+        max-width: calc(100px + (650 - 100) * ((100vw - 320px) / (1440 - 320)));
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.banner-lesson__title {
+    text-align: left;
+    margin: 0 0 calc(30/50 * 1em) 0;
+}
+
+.banner-lesson__text {
+    line-height: 130%;
+    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 500;
+}
+
+.banner-lesson img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: right;
 }
 
 .lessons__row {}
@@ -63,6 +98,12 @@
     justify-content: center;
 }
 
+@media(max-width: 767px) {
+    .sidebar-lesson__title {
+        height: 40px;
+    }
+}
+
 .sidebar-lesson__title i {
     display: none;
     font-size: 28px;
@@ -82,7 +123,6 @@
 @media(max-width: 767px) {
     .sidebar-lesson__title {
         justify-content: space-between;
-        padding: 0 14px;
     }
 
     .sidebar-lesson__title i {
@@ -123,6 +163,7 @@
     padding-left: calc(24 * ((100vw - 320px) / (1440 - 320)));
     padding-right: calc(24 * ((100vw - 320px) / (1440 - 320)));
     padding-bottom: calc(24 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
 }
 
 .content-lesson__info {}
@@ -133,6 +174,7 @@
 
 .content-lesson__body {
     overflow: hidden;
+    padding-top: 30px;
 }
 
 .content-lesson__video {
@@ -316,6 +358,7 @@
     pointer-events: none;
 }
 
+/* Eski variant lesson-arduino */
 /* bullet styles */
 /* .nested-lesson__pagination {
     display: flex;
@@ -323,7 +366,7 @@
     position: relative;
 } */
 
-.nested-lesson__pagination {
+/* .nested-lesson__pagination {
     background: rgba(0, 0, 0, .25);
     width: 100%;
     height: 6px;
@@ -343,4 +386,4 @@
     height: 100%;
     transform: scale(0);
     transform-origin: left top;
-}
+} */

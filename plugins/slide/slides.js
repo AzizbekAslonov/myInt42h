@@ -255,32 +255,35 @@ if (document.querySelector('.advantages__body')) {
 }
 
 if (document.querySelector('.content-lesson__body')) {
-   const CONTROLS = [
-      'Необходимые комплектующие',
-      '1.2 React va komponentlar',
-      'Ulanishi ...'
-   ]
-   new Swiper('.content-lesson__body', {
+   const manuallyBullets = document.querySelectorAll('.content-spoller-modules__item')
+   const lessonSlider = new Swiper('.content-lesson__body', {
       observer: true,
       observeParents: true,
-      watchOverflow: true,
       speed: 800,
       allowTouchMove: false,
-      preloadImages: true,
+      // preloadImages: false,
       spaceBetween: 15,
       // Пагинация
       pagination: {
-         el: '.content-spoller-modules',
-         clickable: true,
-         renderBullet: function (index, className) {
-            return ` <div class="${className} content-spoller-modules__item">
-               <i class="fas fa-lock content-spoller-modules__access"></i>
-               <div class="content-spoller-modules__info">
-               ${CONTROLS[index]}
-               </div>
-            </div>`
-         },
+         el: '.content-lesson__pagination',
+         type: 'progressbar',
       },
+      on: {
+         init: function () {
+            manuallyBullets[0].classList.add('swiper-pagination-bullet-active')
+         },
+         slideChange: function () {
+            // manuallyBullets
+            manuallyBullets[lessonSlider.realIndex].classList.add('swiper-pagination-bullet-active')
+         },
+         slideChangeTransitionStart: function () {
+            manuallyBullets[lessonSlider.previousIndex].classList.remove('swiper-pagination-bullet-active')
+         }
+      }
+   })
+
+   manuallyBullets.forEach((bullet, index) => {
+      bullet.addEventListener('click', () => lessonSlider.slideTo(index))
    })
 }
 

@@ -16,6 +16,12 @@ window.onload = function () {
          targetElement.closest('.ui-lesson__checkbox').classList.toggle('_checked')
       }
 
+      if (targetElement.closest('.icon-menu')) {
+         document.querySelector('.menu__body')?.classList.toggle('_active')
+         document.body.classList.toggle('_lock')
+         targetElement.closest('.icon-menu').classList.toggle('_active')
+      }
+
       // !!!!!!! <Mobile search responsive> !!!!!!
       // if (targetElement.classList.contains('search-form__icon')) {
       //    document.querySelector('.search-form').classList.toggle('_active')
@@ -23,17 +29,10 @@ window.onload = function () {
       //    document.querySelector('.search-form').classList.remove('_active')
       // }
    }
+
    // Set ibg, header scroll anim
    _setBasicTemplate()
 
-   let iconMenu = document.querySelector('.icon-menu')
-   if (iconMenu) {
-      iconMenu.addEventListener('click', () => {
-         document.querySelector('.menu__body')?.classList.toggle('_active')
-         document.body.classList.toggle('_lock')
-         iconMenu.classList.toggle('_active')
-      })
-   }
    // Main title animation
    // let mainTitle = document.querySelector('.intro-main__title span')
    // if (mainTitle) {

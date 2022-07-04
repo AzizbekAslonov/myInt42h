@@ -23,12 +23,21 @@ function _ibg() {
    }
 }
 
+// Set basic template
+function _setBasicTemplate() {
+   _setHeaderScroll()
+   _ibg()
+}
+
 function uploadFile(inputSelector, options) {
    if (!options || !options.acceptArr || options.once === undefined || !options.then || !options.catch) {
-      return console.log('KONFIGURATSIYA!');
+      return console.log('KONFIGURATSIYA!')
+   }
+   if (!document.querySelector(inputSelector)) {
+      return console.log('SELECTOR')
    }
 
-   let input = document.querySelector(inputSelector);
+   let input = document.querySelector(inputSelector)
    setInputConfig()
 
    input.addEventListener('change', () => {
@@ -46,7 +55,7 @@ function uploadFile(inputSelector, options) {
                const file = input.files.item(i);
                if (!options.acceptArr.includes(file.type)) {
                   isError = true
-                  break;
+                  break
                }
             }
             if (isError) {
@@ -57,7 +66,7 @@ function uploadFile(inputSelector, options) {
          }
          else options.then(input.files)
       }
-   });
+   })
    function setInputConfig() {
       if (!options.once) input.multiple = true
 
@@ -160,8 +169,3 @@ let _slideToggle = (target, duration = 300) => {
 }
 
 // SLIDE_UP, SLIDE_DOWN, SLIDE_TOGGLE!!!=====================================================================================
-
-function _setBasicTemplate() {
-   _setHeaderScroll()
-   _ibg()
-}
