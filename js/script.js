@@ -22,6 +22,10 @@ window.onload = function () {
          targetElement.closest('.icon-menu').classList.toggle('_active')
       }
 
+      if (!targetElement.closest('.actions-gmode')) {
+         console.log('w');
+         document.querySelector('.actions-gmode._active')?.classList.remove('_active')
+      }
       // !!!!!!! <Mobile search responsive> !!!!!!
       // if (targetElement.classList.contains('search-form__icon')) {
       //    document.querySelector('.search-form').classList.toggle('_active')

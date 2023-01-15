@@ -1,16 +1,17 @@
 // Header
 function _setHeaderScroll() {
    let headerEl = document.querySelector('.header');
-
-   const callback = entries => {
-      if (entries[0].isIntersecting) {
-         headerEl.classList.remove('_scroll');
-      } else {
-         headerEl.classList.add('_scroll');
-      }
-   };
-   const headerObserver = new IntersectionObserver(callback);
-   headerObserver.observe(headerEl);
+   if (headerEl) {
+      const callback = entries => {
+         if (entries[0].isIntersecting) {
+            headerEl.classList.remove('_scroll');
+         } else {
+            headerEl.classList.add('_scroll');
+         }
+      };
+      const headerObserver = new IntersectionObserver(callback);
+      headerObserver.observe(headerEl);
+   }
 }
 
 // Ibg

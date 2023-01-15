@@ -323,9 +323,6 @@
 .item-lang{
 }
 
-.item-lang{
-}
-
 .item-lang .menu__item{
    flex-wrap: nowrap;
 }
@@ -339,7 +336,7 @@
 }
 
 .item-lang__title._active .menu__arrow{
-      transform: rotate(180deg);
+   transform: rotate(180deg);
 }
 
 @media(max-width: 768px){

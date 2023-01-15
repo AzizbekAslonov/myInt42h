@@ -21,82 +21,15 @@
 
    <!-- Swiper -->
    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
-   <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+   <script src='plugins/swiper.js'></script>
+   <script src="plugins/p5.js"></script>
    <!-- FontAwesome -->
    <link rel="stylesheet" href="plugins/fontawesome/all.min.css">
 </head>
 
 <body>
-   <header class="header">
-      <div class="header__wrapper">
-         <div class="header__container container">
-            <div class="header__body">
-               <div class="header__main">
-                  <a href="index.html" class="header__logo"><img src="img/logo.png" alt=""></a>
-                  <div class='header__menu menu'>
-                     <nav class='menu__body'>
-                        <ul class='menu__list'>
-                           <li class="menu__item">
-                              <a href='blog.html' class='menu__link'>БЛОГ</a>
-                           </li>
-                           <li class="menu__item"><a href='' class='menu__link'>Портфолио</a></li>
-                           <li class="menu__item"><a href='' class='menu__link'>DEMO</a></li>
-                           <li class="menu__item"><a href='' class='menu__link'>Проекты</a></li>
-                           <li class="menu__item"><a href='courses.html' class='menu__link'>Список курсов</a></li>
-                        </ul>
-                     </nav>
-                  </div>
-               </div>
-               <div class="header__actions actions-header">
-                  <!-- LANGUAGE CAHNGE -->
-                  <div data-dy="menu__list,last,778" data-spollers="768,max"
-                     class='actions-header__item actions-header__item-lang item-lang'>
-                     <div class="menu__item">
-                        <!-- !!!!!!!!!!!!!!!!!!!! -->
-                        <button data-spoller type="button" class="menu__link item-lang__title">
-                           UZ <i class="fas fa-angle-down menu__arrow" aria-hidden="true"></i>
-                        </button>
-                        <ul class="menu__sub-list">
-                           <li class="menu__sub-item"><a href="" class="menu__sub-link">ENG</a></li>
-                           <li class="menu__sub-item"><a href="" class="menu__sub-link">RU</a></li>
-                           <li class="menu__sub-item"><a href="" class="menu__sub-link">UZ</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <!-- LANGUAGE CAHNGE -->
-                  <div class="actions-header__item cart-header">
-                     <a href="" class="cart-header__icon">
-                        <i class="fas fa-cart-plus"></i>
-                     </a>
-                     <div class="cart-header__body">
-                        <ul class="cart-header__list cart-list"></ul>
-                     </div>
-                  </div>
-                  <a href="profile.html" class="actions-header__item actions-header__item-user _ibg">
-                     <img src="img/avatar.jpg" alt="Avatar">
-                  </a>
-               </div>
-               <div class='icon-menu'>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
-
    <div class="lessons">
-      <div class="lessons__banner banner-lesson">
-         <div data-dy="lessons,first,992" class="banner-lesson__content">
-            <h1 class="title banner-lesson__title">Arduino Reactjs Nodejs</h1>
-            <p class="banner-lesson__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
-               necessitatibus cupiditate quo iure cum facilis nemo voluptate eum mollitia sunt?</p>
-         </div>
-         <img src="./img/banner/arduino.jpg" alt="">
-      </div>
-
-      <div class="container lessons__row">
+      <div class="lessons__row">
          <div class="lesson__sidebar sidebar-lesson">
             <div class="sidebar-lesson__title subtitle">План урока</div>
             <div data-spollers data-one-spoller class="programm-course__modules modules-programm">
@@ -114,21 +47,7 @@
                      <!-- <SLider control> -->
                      <div class="swiper-pagination-bullet content-spoller-modules__item">
                         <i class="fas fa-lock content-spoller-modules__access"></i>
-                        <div class="content-spoller-modules__info">
-                           PLAN 1
-                        </div>
-                     </div>
-                     <div class="swiper-pagination-bullet content-spoller-modules__item">
-                        <i class="fas fa-lock content-spoller-modules__access"></i>
-                        <div class="content-spoller-modules__info">
-                           PLAN 2
-                        </div>
-                     </div>
-                     <div class="swiper-pagination-bullet content-spoller-modules__item">
-                        <i class="fas fa-lock content-spoller-modules__access"></i>
-                        <div class="content-spoller-modules__info">
-                           PLAN 3
-                        </div>
+                        <div class="content-spoller-modules__info">PLAN 1</div>
                      </div>
                      <!-- </SLider control> -->
                   </div>
@@ -138,218 +57,17 @@
 
          <div class="lessons__preview">
             <div class="lesson__content content-lesson">
-               <div class="content-lesson__pagination"></div>
+               <!-- <div class="content-lesson__pagination"></div> -->
                <!-- Slider -->
                <div class="content-lesson__body _swiper">
                   <div class="content-lesson__slide">
                      <div class="content-lesson__info">
-                        <div class="content-lesson__title subtitle">Необходимые комплектующие </div>
-                        <!-- <ul class="ui-lesson__list">
-                           <li>Arduino platasi</li>
-                           <li>Sxemotexnikadan bilimlar va ko'nikmalar</li>
-                           <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                           <li>Lorem ipsum dolor sit amet.</li>
-                           <li>Sxemotexnikadan bilimlar va ko'nikmalar</li>
-                           <li>Arduino platasi</li>
-                        </ul> -->
-                        <div class="table-responsive">
-                           <table class="ui-lesson__table">
-                              <thead>
-                                 <tr>
-                                    <th>Наименование</th>
-                                    <th>Количество</th>
-                                    <th>Yest</th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <tr>
-                                    <td>Макетные провода папа-папа </td>
-                                    <td>10</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Светодиод желтый </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Светодиод красный </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Светодиод зеленый </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Фомикс30х30(конструктор ) </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Бутылка с водой для теста устройства* </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Термистор </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Контроллер Ардуино уно </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Беспаечная макетная плата </td>
-                                    <td>1</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Резистор 220 кОм </td>
-                                    <td>3</td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Активированный уголь </td>
-                                    <td>2-3 таблетки </td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Монета </td>
-                                    <td>2 </td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Паяльник, флюсь, припой </td>
-                                    <td>1 </td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td>Резистор 10 Ком, 100 Ком </td>
-                                    <td>1 </td>
-                                    <td>
-                                       <div class="ui-lesson__checkbox checkbox-ui">
-                                          <i class="fas fa-check"></i>
-                                       </div>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="content-lesson__slide">
-                     <div class="content-lesson__video">
-                        <video width="100%" controls>
-                           <source src="movie.mp4" type="video/mp4">
-                           <source src="movie.ogg" type="video/ogg">
-                           Your browser does not support the video tag.
-                        </video>
-                     </div>
-                     <div class="content-lesson__info">
-                        <div class="content-lesson__title subtitle">KODLAR VA JAVOBLAR</div>
-                        <div class="content-lesson__text">
-                           Har bir dars davomida yozilgan kodlar va amaliy mashg’ulotlarning javoblari bizning GithHub
-                           sahifamizga yuklangan: <a href="https://github.com">https://github.com</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="content-lesson__slide">
-                     <div class="content-lesson__nested nested-lesson">
-                        <div class="swiper nested-lesson__body">
-                           <div class="swiper-wrapper">
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/01.jpg" alt="">
-                              </div>
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/02.jpg" alt="">
-                              </div>
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/03.jpg" alt="">
-                              </div>
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/04.jpg" alt="">
-                              </div>
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/05.jpg" alt="">
-                              </div>
-                              <div class="swiper-slide nested-lesson__slide">
-                                 <img src="img/courses/arduiono/smart-kuller/06.jpg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="nested-lesson__pagination"></div>
-                        <div class="nested-lesson__navigation">
-                           <div class="nested-lesson__prev">
-                              <i class="fas fa-arrow-left"></i>
-                           </div>
-                           <div class="nested-lesson__next">
-                              <i class="fas fa-arrow-right"></i>
-                           </div>
-                        </div>
+                        <div class="content-lesson__title subtitle">Необходимые комплектующие</div>
+                        <div style="border: 1px solid #000;" id="canvas-container"></div>
                      </div>
                   </div>
                </div>
                <!-- Slider -->
-               <div class="content-lesson__navigation">
-                  <a href=""><i class="fas fa-long-arrow-alt-left"></i> Предыдущий</a>
-                  <a href="">Следующий <i class="fas fa-long-arrow-alt-right"></i></a>
-               </div>
             </div>
          </div>
       </div>
@@ -357,10 +75,7 @@
 
    <script src="js/functions.js"></script>
    <script src="js/script.js"></script>
-
-   <script src="plugins/spoilers.js"></script>
-   <script src="plugins/dynamic.js"></script>
-   <script src="plugins/slide/slides.js"></script>
+   <script src="js/lesson.js"></script>
 </body>
 
 </html>
