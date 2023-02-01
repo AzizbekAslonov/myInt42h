@@ -240,6 +240,7 @@ if (document.querySelector('.advantages__body')) {
       preloadImages: false,
       parallax: true,
       spaceBetween: 15,
+      slidesPerView: 3,
       breakpoints: {
          768: {
             slidesPerView: 2,

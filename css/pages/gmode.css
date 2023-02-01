@@ -165,3 +165,18 @@
 .dropdown-gmode__item_red {
    color: #D30000;
 }
+
+/* edit */
+.gmode-edit {
+   /* padding: ; */
+}
+
+.gmode-edit__label {
+   display: inline-block;
+   margin: 10px 0 15px 0;
+   font-weight: 500;
+}
+
+.vmodal .modal-body {
+   font-size: unset;
+}

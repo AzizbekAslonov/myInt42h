@@ -9,12 +9,12 @@
    <!-- </Global styles> -->
    <link rel="stylesheet" href="css/ui.css">
    <link rel="stylesheet" href="css/start.css">
-
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/forms.css">
    <link rel="stylesheet" href="css/footer.css">
    <!-- Plugins -->
    <link rel="stylesheet" href="plugins/slide/slides.css">
+   <link rel="stylesheet" href="plugins/modal/modal.css">
    <link rel="stylesheet" href="plugins/select/select.css">
    <!-- </Page styles> -->
    <link rel="stylesheet" href="css/pages/gmode.css">
@@ -122,12 +122,12 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>Azizbek</td>
-                     <td>Aslonov</td>
+                     <td data-fname>Azizbek</td>
+                     <td data-lname>Aslonov</td>
                      <td>14/APR/2020</td>
                      <td>example@email.com</td>
                      <td>Бухарская область</td>
-                     <td>+998931234567</td>
+                     <td data-phone>+998931234567</td>
                      <td>
                         <div class="gmode__status">
                            <div class="gmode__state gmode__state_green">
@@ -142,67 +142,7 @@
                               <i class="fas fa-ellipsis-v"></i>
                            </button>
                            <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
-                              <div class="dropdown-gmode__item">Просмотреть профил</div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_green">Следить за прогрессом</div>
-                              <div class="dropdown-gmode__divider"></div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_red">Сброс оплаты</div>
-                           </div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>Azizbek</td>
-                     <td>Aslonov</td>
-                     <td>14/APR/2020</td>
-                     <td>example@email.com</td>
-                     <td>Бухарская область</td>
-                     <td>+998931234567</td>
-                     <td>
-                        <div class="gmode__status">
-                           <div class="gmode__state gmode__state_red">
-                              Просрочено
-                           </div>
-                           <span>15/APR/2023</span>
-                        </div>
-                     </td>
-                     <td>
-                        <div class="gmode__actions actions-gmode">
-                           <button class="actions-gmode__trigger">
-                              <i class="fas fa-ellipsis-v"></i>
-                           </button>
-                           <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
-                              <div class="dropdown-gmode__item">Просмотреть профил</div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_green">Следить за прогрессом</div>
-                              <div class="dropdown-gmode__divider"></div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_red">Сброс оплаты</div>
-                           </div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>John</td>
-                     <td>Doe</td>
-                     <td>14/APR/2020</td>
-                     <td>john@email.com</td>
-                     <td>Бухарская область</td>
-                     <td>+998931234567</td>
-                     <td>
-                        <div class="gmode__status">
-                           <div class="gmode__state gmode__state_green">
-                              Оплаченный
-                           </div>
-                           <span>15/APR/2023</span>
-                        </div>
-                     </td>
-                     <td>
-                        <div class="gmode__actions actions-gmode">
-                           <button class="actions-gmode__trigger">
-                              <i class="fas fa-ellipsis-v"></i>
-                           </button>
-                           <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
+                              <div data-dropdown="edit" class="dropdown-gmode__item">Редактировать</div>
                               <div class="dropdown-gmode__item">Просмотреть профил</div>
                               <div class="dropdown-gmode__item dropdown-gmode__item_green">Следить за прогрессом</div>
                               <div class="dropdown-gmode__divider"></div>
@@ -296,6 +236,7 @@
    <script src="./plugins/spoilers.js"></script>
    <script src="./plugins/slide/slides.js"></script>
    <script src="./plugins/writer.js"></script>
+   <script src="./plugins/modal/modal.js"></script>
    <script src="./plugins/select/select.js"></script>
    <script src="./plugins/dynamic.js"></script>
 
