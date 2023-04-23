@@ -14,32 +14,63 @@ if (dropdownActions.length > 0) {
 }
 
 // filter by courses
-const select = new Select('#select', {
-   placeholder: 'Курс не выбран',
-   data: ['All', 'programming', 'design', 'math', 'physics'],
-   // myClass: '',
-   openClass: '_open',
-   selectedClass: '_selected',
-   iconDown: '<i class="fas fa-angle-down"></i>',
-   onchange(text) {
-      console.log(text);
-   }
-})
+if (document.querySelector('#select')) {
+   const select = new Select('#select', {
+      placeholder: 'Курс не выбран',
+      data: ['All', 'programming', 'design', 'math', 'physics'],
+      // myClass: '',
+      openClass: '_open',
+      selectedClass: '_selected',
+      iconDown: '<i class="fas fa-angle-down"></i>',
+      onchange(text) {
+         console.log(text);
+      }
+   })
+}
 
 // dropdown actions
 let dropdownItems = document.querySelectorAll('[data-dropdown]');
+const thData = [
+   document.querySelector('[data-label-name]').textContent,
+   document.querySelector('[data-label-description]').textContent,
+   document.querySelector('[data-label-duration]').textContent,
+   document.querySelector('[data-label-quantity]').textContent,
+   document.querySelector('[data-label-price]').textContent,
+]
 dropdownItems.forEach(item => {
    item.addEventListener('click', function (e) {
       const { dropdown: type } = item.dataset
       if (type === 'edit') {
          let student = item.closest('tr')
-         const fname = student.querySelector('[data-fname]').textContent
-         const lname = student.querySelector('[data-lname]').textContent
-         const phone = student.querySelector('[data-phone]').textContent
+         const name = student.querySelector('[data-name]').textContent
+         const description = student.querySelector('[data-description]').textContent
+         const duration = student.querySelector('[data-duration]').textContent
+         const quantity = student.querySelector('[data-quantity]').textContent
+         const price = student.querySelector('[data-price]').textContent
 
-         const content = generateEditContent(fname, lname, phone)
+         const content = generateEditContent({
+            name,
+            description,
+            duration,
+            quantity,
+            price,
+         })
 
-         showDefaultModal('Edit user', content, [{ text: 'Save', type: 'success' }])
+         showDefaultModal('Edit user', content, [
+            {
+               text: 'Save',
+               type: 'primary',
+               handler: () => {
+                  console.log({
+                     name: document.querySelector('#name').value,
+                     description: document.querySelector('#description').value,
+                     duration: document.querySelector('#duration').value,
+                     quantity: document.querySelector('#quantity').value,
+                     price: document.querySelector('#price').value,
+                  })
+               }
+            }
+         ])
       } else if (type === '') {
 
       }
@@ -72,17 +103,43 @@ function showDefaultModal(title = '', content = '', footerButtons) {
    setTimeout(modal.open, 0)
 }
 
-function generateEditContent(fname, lname, phone) {
-   return `
-      <div class="item-inputs">
-         <label class="gmode-edit__label" for="fname">Firstname</label>
-         <input id="name" placeholder="" class="input" type="text" value="${fname}">
-         <span class="item-inputs__span"></span>
+function generateEditContent(data) {
+   console.log(data);
+   let result = ``
+   let count = 0
+   for (const label in data) {
+      const value = data[label]
+
+      if (label === 'description') {
+         result += `
+         <div class="item-block__inputs">
+         <label class="gmode-edit__label" for="description">${thData[count]}</label>
+         <textarea class="input" id="description"
+            class="item-block__textarea">${value}</textarea>
       </div>
-      <div class="item-inputs">
-         <label class="gmode-edit__label" for="lname">Lastname</label>
-         <input id="lname" placeholder="" class="input" type="text" value="${lname}">
-         <span class="item-inputs__span"></span>
-      </div>
-   `
+      `
+      }
+      else if (label === 'name') {
+         result += `
+         <div class="item-inputs">
+            <label class="gmode-edit__label" for="${label}">${thData[count]}</label>
+            <input id="${label}" placeholder="" class="input" type="text" value="${value}">
+            <span class="item-inputs__span"></span>
+         </div>
+      `
+      }
+      else {
+         result += `
+         <div class="item-inputs">
+            <label class="gmode-edit__label" for="${label}">${thData[count]}</label>
+            <input id="${label}" placeholder="" class="input" type="number" value="${value}">
+            <span class="item-inputs__span"></span>
+         </div>
+      `
+      }
+
+      count++
+   }
+
+   return result
 }

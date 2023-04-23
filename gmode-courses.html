@@ -15,6 +15,7 @@
    <link rel="stylesheet" href="css/footer.css">
    <!-- Plugins -->
    <link rel="stylesheet" href="plugins/slide/slides.css">
+   <link rel="stylesheet" href="plugins/modal/modal.css">
    <link rel="stylesheet" href="plugins/select/select.css">
    <!-- </Page styles> -->
    <link rel="stylesheet" href="css/pages/gmode.css">
@@ -105,78 +106,82 @@
                </div>
                <h2 class="subtitle">Кол-во учеников в школе: 2302</h2>
             </div>
-            <table class="ui-lesson__table">
-               <thead>
-                  <tr>
-                     <th>Логотип</th>
-                     <th>Название</th>
-                     <th>Кол-во учеников</th>
-                     <th>Действие</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>
-                        <img src="./img/logo.png" alt="Out Logo">
-                     </td>
-                     <td>Artificial Intelligence</td>
-                     <td>135</td>
-                     <td>
-                        <div class="gmode__actions actions-gmode">
-                           <button class="actions-gmode__trigger">
-                              <i class="fas fa-ellipsis-v"></i>
-                           </button>
-                           <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
-                              <div class="dropdown-gmode__item">Быстрое добавление</div>
-                              <div class="dropdown-gmode__item">Быстрое зачисления</div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_green">Рейтинг</div>
+            <div class="gmode__table">
+               <table class="ui-lesson__table">
+                  <thead>
+                     <tr>
+                        <th>Логотип</th>
+                        <th data-label-name>Название</th>
+                        <th data-label-description>Описание</th>
+                        <th data-label-duration>Длительность (час)</th>
+                        <th data-label-quantity>Кол-во учеников</th>
+                        <th data-label-price>Стоимость (сум)</th>
+                        <th>Действие</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <img src="./img/logo.png" alt="Out Logo">
+                        </td>
+                        <td data-name>Artificial Intelligence</td>
+                        <td data-description>Перед учителями стоит важная задача — установить высокую планку
+                           преподавания робототехники в школе. Наш курс показывает, как построить учебную программу этой
+                           дисциплины, выработать систему оценки знаний и наладить сотрудничество между школой и вузом.
+
+                           Разрабатывая автоматизированные системы, робототехник опирается на знания электроники,
+                           механики, кибернетики и других дисциплин. Школьник же при решении подобных задач
+                           ориентируется на сведения, полученные на уроках физики, математики и информатики. На занятиях
+                           по робототехнике затрагиваются все эти науки, что помогает детям открыть их для себя на новом
+                           уровне. Данный курс призван помочь учителям составить учебную программу предмета.
+                           Курс подойдет для школьников, родителей, и всех, кто хочет познакомиться с основами
+                           робототехники. Для учителей и наставников есть отдельная глава о возможностях и перспективах
+                           преподавания робототехники</td>
+                        <td data-duration>100</td>
+                        <td data-quantity>350</td>
+                        <td data-price>600</td>
+                        <!-- actions -->
+                        <td>
+                           <div class="gmode__actions actions-gmode">
+                              <button class="actions-gmode__trigger">
+                                 <i class="fas fa-ellipsis-v"></i>
+                              </button>
+                              <div class="actions-gmode__dropdown dropdown-gmode">
+                                 <div data-dropdown="edit" class="dropdown-gmode__item">Редактировать</div>
+                                 <div class="dropdown-gmode__item">Быстрое добавление</div>
+                                 <div class="dropdown-gmode__item">Быстрое зачисления</div>
+                                 <div class="dropdown-gmode__item dropdown-gmode__item_green">Рейтинг</div>
+                              </div>
                            </div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="./img/logo.png" alt="Out Logo">
-                     </td>
-                     <td>React JS development</td>
-                     <td>20</td>
-                     <td>
-                        <div class="gmode__actions actions-gmode">
-                           <button class="actions-gmode__trigger">
-                              <i class="fas fa-ellipsis-v"></i>
-                           </button>
-                           <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
-                              <div class="dropdown-gmode__item">Быстрое добавление</div>
-                              <div class="dropdown-gmode__item">Быстрое зачисления</div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_green">Рейтинг</div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="./img/logo.png" alt="Out Logo">
+                        </td>
+                        <td data-name>Artificial Intelligence 2</td>
+                        <td data-description>Descr</td>
+                        <td data-duration>2</td>
+                        <td data-quantity>2</td>
+                        <td data-price>2</td>
+                        <!-- actions -->
+                        <td>
+                           <div class="gmode__actions actions-gmode">
+                              <button class="actions-gmode__trigger">
+                                 <i class="fas fa-ellipsis-v"></i>
+                              </button>
+                              <div class="actions-gmode__dropdown dropdown-gmode">
+                                 <div data-dropdown="edit" class="dropdown-gmode__item">Редактировать</div>
+                                 <div class="dropdown-gmode__item">Быстрое добавление</div>
+                                 <div class="dropdown-gmode__item">Быстрое зачисления</div>
+                                 <div class="dropdown-gmode__item dropdown-gmode__item_green">Рейтинг</div>
+                              </div>
                            </div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="./img/logo.png" alt="Out Logo">
-                     </td>
-                     <td>Arduino</td>
-                     <td>2</td>
-                     <td>
-                        <div class="gmode__actions actions-gmode">
-                           <button class="actions-gmode__trigger">
-                              <i class="fas fa-ellipsis-v"></i>
-                           </button>
-                           <div class="actions-gmode__dropdown dropdown-gmode">
-                              <div class="dropdown-gmode__item">Редактировать</div>
-                              <div class="dropdown-gmode__item">Быстрое добавление</div>
-                              <div class="dropdown-gmode__item">Быстрое зачисления</div>
-                              <div class="dropdown-gmode__item dropdown-gmode__item_green">Рейтинг</div>
-                           </div>
-                        </div>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
          </div>
       </main>
       <!-- </Main Page> -->
@@ -260,6 +265,7 @@
    <script src="./plugins/spoilers.js"></script>
    <script src="./plugins/slide/slides.js"></script>
    <script src="./plugins/writer.js"></script>
+   <script src="./plugins/modal/modal.js"></script>
    <script src="./plugins/select/select.js"></script>
    <script src="./plugins/dynamic.js"></script>
 

@@ -390,9 +390,9 @@
 }
 
 .ui-lesson__table td img {
-   height: 40px;
-   max-width: 100%;
-   object-fit: cover;
+   max-height: 40px;
+   max-width: 100px;
+   /* object-fit: cover; */
 }
 
 /* checkbox */
